@@ -138,6 +138,9 @@ if __name__ == '__main__':
 
   env = BuildEnv(ninja_vars)
   env.Program('bfi_demo', ['bfi_demo.c', 'bf_interpreter.c'])
+  env.Test('test_bf_interpreter',
+      ['test_bf_interpreter.c',
+       'byte_buffer.c','bf_interpreter.c'])
 
   with open("build.ninja", "w") as f:
     env.write_ninja(f)

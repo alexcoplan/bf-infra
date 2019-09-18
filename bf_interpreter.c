@@ -1,13 +1,12 @@
 #include "bf_interpreter.h"
 #include "error.h"
 #include "debug.h"
+#include "macros.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
-
-#define ARRAY_LENGTH(x) ((sizeof(x)) / (sizeof((x)[0])))
 
 struct bf_interpreter {
   uint8_t *tape;
